@@ -1,0 +1,19 @@
+apiVersion: appstudio.redhat.com/v1beta1
+kind: IntegrationTestScenario
+metadata:
+  name: example
+  namespace: default
+spec:
+  application: application-sample
+  contexts:
+    - description: Application testing
+      name: application
+  resolverRef:
+    resolver: git
+    params:
+      - name: url
+        value: https://github.com/redhat-appstudio/integration-examples
+      - name: revision
+        value: main
+      - name: pathInRepo
+        value: pipelines/integration_resolver_pipeline_pass.yaml

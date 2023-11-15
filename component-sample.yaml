@@ -1,0 +1,10 @@
+apiVersion: appstudio.redhat.com/v1alpha1
+kind: Component
+metadata:
+  name: component-sample
+spec:
+  application: application-sample
+  componentName: component-sample
+  source:
+    git:
+      url: 'https://github.com/redhat-appstudio-qe/hacbs-test-project'
